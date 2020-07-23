@@ -5,10 +5,10 @@ node (label: 'build && linux') {
 
   stage("Main build") {
     docker.image('node:10').pull()
-    docker.image('ismail0352/chrome-node').pull()
+    docker.image('bibekkumar8/chrome-node').pull()
 
     stage('Checkout SCM') {
-      checkout([$class: 'GitSCM', branches: [[name: 'master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ismail0352/Packer-Terraform-Jenkins.git']]])
+      checkout([$class: 'GitSCM', branches: [[name: 'master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/bibekkumar8/E-Commerce.git']]])
     }
     
     // Permorming Install and Lint
